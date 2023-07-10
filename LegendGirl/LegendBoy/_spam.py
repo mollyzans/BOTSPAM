@@ -29,9 +29,7 @@ async def spam(Legend: Client, e: Message):
     chat = e.chat
     if e.reply_to_message:
         lmao = e.reply_to_message
-        sweetie = 0
-        while sweetie < counts:
-            sweetie += 1
+        for _ in range(counts):
             for i in range(1, 26):
                 lol = globals()[f"Client{i}"]
                 if lol is not None:
@@ -40,9 +38,7 @@ async def spam(Legend: Client, e: Message):
                     )
             await asyncio.sleep(0.3)
     elif len(lol) == 2:
-        sweetie = 0
-        while sweetie < counts:
-            sweetie += 1
+        for _ in range(counts):
             for i in range(1, 26):
                 lol = globals()[f"Client{i}"]
                 if lol is not None:
